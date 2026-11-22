@@ -56,6 +56,7 @@ h1 {
 }
 
 main {
+  min-height: 100vh;
   width: min(1120px, 100% - 32px);
   margin: 0 auto;
   padding-bottom: 2rem;
@@ -409,6 +410,7 @@ legend {
 }
 
 .loading {
+  min-height: 60vh;
   padding: 4rem 0;
   text-align: center;
   color: var(--ink-soft);

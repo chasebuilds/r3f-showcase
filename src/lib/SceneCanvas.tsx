@@ -43,7 +43,7 @@ export function SceneCanvas({
   const pageVisible = usePageVisible()
   const reducedMotion = useReducedMotion()
   const supported = useMemo(() => webglAvailable(), [])
-  const [factorDpr, setFactorDpr] = useState(maxDpr)
+  const [factorDpr, setFactorDpr] = useState(Math.min(maxDpr, 1.25))
 
   const frameloop = pickFrameloop({ visible: inView && pageVisible, reducedMotion, animated })
   const deviceDpr = typeof window === 'undefined' ? 1 : window.devicePixelRatio || 1

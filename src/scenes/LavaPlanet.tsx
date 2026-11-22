@@ -58,7 +58,7 @@ function Planet({ heat, speed, palette, animated }: Required<Omit<LavaPlanetProp
     <>
       <group ref={group}>
         <mesh>
-          <sphereGeometry args={[1.6, 160, 160]} />
+          <sphereGeometry args={[1.6, 96, 96]} />
           <shaderMaterial ref={material} uniforms={uniforms} vertexShader={PLANET_VERTEX} fragmentShader={PLANET_FRAGMENT} />
         </mesh>
       </group>
