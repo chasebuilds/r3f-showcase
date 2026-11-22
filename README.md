@@ -35,13 +35,21 @@ A small badge in the corner of each scene shows its current mode (live, draws on
 
 ## Measured
 
-Lighthouse performance score (mobile settings, Lighthouse 13, run against the live GitHub Pages site on 2026-11-22):
+Lighthouse performance score (mobile settings, Lighthouse 13.6.0, run against the live GitHub Pages site on 2026-11-22):
 
-LIGHTHOUSE_TABLE
+| Page | Performance | Largest paint | Blocking time | Layout shift |
+| --- | --- | --- | --- | --- |
+| Overview (no 3D) | 100 | 1.2 s | 40 ms | 0 |
+| Product configurator | 81 | 2.4 s | 680 ms | 0.018 |
+| Scroll-driven hero | 76 | 2.4 s | 980 ms | 0.018 |
+| Gallery wall | 90 | 2.6 s | 310 ms | 0 |
+| Shader planet | 82 | 2.4 s | 630 ms | 0.018 |
 
-- Production JavaScript: LISTED_BUNDLE.
+Each score is one run (`npx lighthouse@13.6.0 <url> --only-categories=performance`), not an average. The scene pages score lower because three.js is about 930 KB of JavaScript (246 KB gzipped) that the browser has to parse before it can draw.
+
+- Production JavaScript: the overview page loads 226 KB (71 KB gzipped). A scene page adds one shared 3D chunk of 927 KB (246 KB gzipped) plus 5 to 13 KB for the page itself.
 - 28 automated tests (logic, controls, routing, fallback).
-- Scores depend on the machine and network. The scene pages were measured with a software renderer because the test machine had no GPU in the browser used by Lighthouse, so a real phone with a GPU should draw those scenes more easily. Treat the numbers as a guide, not a promise.
+- Scores change from run to run. Lighthouse uses a headless Chrome that draws 3D in software, so a real phone with a GPU should draw these scenes more easily. Treat the numbers as a guide, not a promise.
 
 ## Run it
 
