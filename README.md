@@ -102,3 +102,11 @@ Built with React 19, TypeScript (strict), Vite, three.js, `@react-three/fiber` a
 ## License
 
 MIT, see [LICENSE](LICENSE).
+
+## More from Chase Builds
+
+- **[liquid-logo-studio](https://github.com/chasebuilds/liquid-logo-studio)**: Turns any logo into animated liquid chrome or gold, ready to export or embed. ([live demo](https://chasebuilds.github.io/liquid-logo-studio/))
+- **[cursor-fluid](https://github.com/chasebuilds/cursor-fluid)**: A dependency-free WebGL2 fluid background that follows the cursor, keeps hero text readable and scales quality to hold frame rate on phones. ([live demo](https://chasebuilds.github.io/cursor-fluid/))
+- **[notebook-shelf](https://github.com/chasebuilds/notebook-shelf)**: A shelf of notebooks that open in 3D. Great for portfolios, menus and catalogs. ([live demo](https://chasebuilds.github.io/notebook-shelf/))
+
+[All projects, sorted by industry](https://github.com/chasebuilds) · [chasebuilds.github.io](https://chasebuilds.github.io)
